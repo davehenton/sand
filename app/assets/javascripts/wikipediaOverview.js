@@ -3,6 +3,3 @@ function getWikipediaOverview(cityState) {
   {}
 }
 
-{}
-; 
-;
