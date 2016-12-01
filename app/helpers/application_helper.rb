@@ -6,10 +6,11 @@ end
 	
 end
 	def query_top_tracks(token_code)
-		token_response = HTTParty.post("https://accounts.spotify.com/api/token", body: { grant_type:"authorization_code", code: token_code, redirect_uri: "http://localhost:3000/welcome/landing", client_id:  }, header: { authorization: "code" })
+		token_response = HTTParty.post("https://accounts.spotify.com/api/token", body: { grant_type:"authorization_code", code: token_code, redirect_uri: "http://localhost:3000/welcome/landing" }, header: { authorization: "code" })
 		token = token_response["access_token"]
 		token = token_response["access_token"]
 		if token
+			if
 			p "recieved token"
 		else 
 			p "did not recieve token"
@@ -19,6 +20,7 @@ end
 		state_query = HTTParty.get("https://api.spotify.com/v1/search?q=california&limit=5&type=track", headers: { "Authorization" => "Bearer " + token })
 		p state_query
 		return state_query
+		if
 	end
 end
 
