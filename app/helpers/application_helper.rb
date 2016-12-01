@@ -19,6 +19,7 @@ end
 		state_query = HTTParty.get("https://api.spotify.com/v1/search?q=california&limit=5&type=track", headers: { "Authorization" => "Bearer " + token })
 		p state_query
 		return state_query
+		if
 	end
 end
 
