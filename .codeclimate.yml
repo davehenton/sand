@@ -1,2 +1,7 @@
 engines:
-  -committing a bogus codeclimate config for testing purposes
+  duplication:
+  	enabled: true
+    config:
+    	languages:
+      - ruby
+      	#mass_threshold: 30
